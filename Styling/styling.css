@@ -3,10 +3,30 @@
   margin: 0;
 }
 
+@font-face {
+  font-family: 'schrift';
+  src: './Data/Fonts/abel-regular-webfont.woff';
+}
+
+body{
+font-family: schrift;
+background-color: white;
+}
+
 
 .content-wrapper{
-background-color: rgb(255, 72, 0);
+word-wrap: break-word;
+background-color: rgb(69, 69, 69);
+padding: 20px;
+margin: 5px;
+grid-auto-flow: row;
 
-width: 100px;
-height: 100px;
+
+}
+
+.container{
+  display: grid;
+
+
+  grid-template-columns: 33% 33% 33%;
 }
