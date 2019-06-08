@@ -4,29 +4,51 @@
 }
 
 @font-face {
-  font-family: 'schrift';
-  src: './Data/Fonts/abel-regular-webfont.woff';
+  font-family: "schrift";
+  src: url(../Data/Fonts/abel-regular-webfont.woff);
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(8,12.5%);
+
+}
+
+@media (max-width: 720px) {
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4,25%);
+}
+}
+@media (max-width: 400px) {
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2,50%);
+}
+}
+h1{
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0);
 }
 
 body{
-font-family: schrift;
-background-color: white;
+
+background-color: rgb(255, 128, 128);
+font-family: 'schrift';
+font-size: 20px;
 }
 
 
 .content-wrapper{
 word-wrap: break-word;
-background-color: rgb(69, 69, 69);
+background-color: rgb(249, 167, 167);
 padding: 20px;
 margin: 5px;
 grid-auto-flow: row;
 
 
 }
-
-.container{
-  display: grid;
-
-
-  grid-template-columns: 33% 33% 33%;
+.container :hover{
+background-color: rgb(219, 134, 134);
+transition: 0.5s;
 }
