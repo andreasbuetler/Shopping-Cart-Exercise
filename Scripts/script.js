@@ -2,41 +2,41 @@ $(document).ready(function() {
 
 var content = [
   {
-    title: 'Nummer1',
+    title: 'Object 1',
     text: 'blabla',
-    id:1
+    id:"1",
   },
   {
-    title: 'Nummer2',
+    title: 'Object 2',
     text: 'blabla',
-    id:2
+    id:'2',
 
   },
   {
-    title: 'Nummer3',
+    title: 'Object 3',
     text: 'blabla',
-    id:3
+    id:'3',
 
   },
   {
-    title: 'Nummer4 halllo du was geht?',
+    title: 'Object 4',
     text: 'blablasldjflasjdflöjasödlfsdlöfjlskdfjlökasdjflköajsdlfkjaslkdfjlkasjdfljsdfljlsdj',
-    id:4
+    id:4,
   },
   {
-    title: 'Nummer5',
+    title: 'Object 5',
     text: 'blabla',
-    id:5
+    id:5,
   },
   {
-    title: 'Nummer6',
+    title: 'Object 6',
     text: 'blabla',
-    id:6
+    id:6,
   },
   {
-    title: 'Nummer7',
+    title: 'Object 7',
     text: 'blabla',
-    id:7
+    
   }
 
 ];
@@ -50,33 +50,47 @@ for (var i = 0; i < content.length; i++){
 }
 
 function populateTemplate(content){
-  var filler = `<li class="content-wrapper id="${content.id}">
-  <input type="radio" name="fruit" value="${content.id}" id="${content.id}">
-  <h2>${content.title}<h2/><p>${content.text}<p/><li/>`;
+  var filler = `<div class="content-wrapper id=${content.id}>
+  <input class="js-input" type="radio" name="fruit" value="${content.id}" id="${content.id}">
+  <h1>${content.title}<h1/><p>${content.text}<p/><div/>`;
   console.log("content", $(filler));
-  
   return filler;
 }
+
 
 fillContent(content);
 
 
 var container = $('#rect')
 var contentWrapper = $('.content-wrapper');
+var input = $('input');
 
 
-contentWrapper.click(function(index){
-  console.log("INDEX",contentWrapper.id);
+$('.content-wrapper').click(function(event){
+    var id = event.target.id;
+    console.log('id = ' + id);
+    $( this ).toggleClass( "open" );
 
 })
+//
+// input.click(function(index){
+//   console.log("INDEX",input.id);
+//
+// })
+// $(contentWrapper).click(function( event ) {
+// console.log("CLICKTEST", event.currentTarget);
+// })
+// $( "input" ).on( "click", function() {
+//   console.log("check",$("input:checked").val());
+//   var toggled = $("input:checked").val();
+//   console.log("id Test:", toggled);
+//   contentWrapper.toggleClass("open");
+//
+// });
 
-$( "input" ).on( "click", function() {
-  console.log("check",$("input:checked").val());
-  var toggled = $("input:checked").val();
-  console.log("id Test:", toggled);
-  toggled.addClass("open");
-
-});
+// var opened = contentWrapper.click(get(index)){
+//   console.log.{}
+// }
 
 
 

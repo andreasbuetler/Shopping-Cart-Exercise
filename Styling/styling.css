@@ -56,5 +56,6 @@ transition: 0.5s;
 
 .open{
 background-color: rgb(0, 77, 15);
+transition: 0.5s;
 
 }
