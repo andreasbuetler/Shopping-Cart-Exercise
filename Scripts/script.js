@@ -59,7 +59,7 @@ var content = [
   {
     title: 'Object 7',
     text: 'blabla',
-    img: ''
+    img: 'stick.jpg'
 
   }
 
@@ -79,6 +79,7 @@ function populateTemplate(content){
 
                 <span class="hidden" id="text">${content.text}<br></span>
                 <button type="button"> Test Button </button>
+                <img src="./Data/Pictures/${content.img}" alt="" style='height: 100%; width: 100%; object-fit: contain'>
 
                 <div/>`;
   return filler;
@@ -93,13 +94,23 @@ var contentWrapper = $('.content-wrapper');
 var input = $('input');
 
 
-$('.content-wrapper').click(function(event){
-    var id = event.target.id;
-    console.log('id = ' + id);
-    $( this ).toggleClass( "open" );
-    $(this).show();
+// $('.content-wrapper').click(function(event){
+//     var id = event.target.id;
+//     console.log('id = ' + id);
+//     $( this ).toggleClass( "open" );
+//     $(this).show();
+//
+//   });
 
-  });
+var $testgrid = $('.testgrid').masonry({
+  columnWidth: 80
+});
+// change size of item by toggling gigante class
+$testgrid.on( 'click', '.grid-item', function() {
+  $(this).toggleClass('open');
+  // trigger layout after item size changes
+  $testgrid.masonry('layout');
+});
 
 
     $('.testgrid').masonry({
@@ -107,7 +118,6 @@ $('.content-wrapper').click(function(event){
   itemSelector: '.grid-item',
   horizontalOrder: true,
   columnwidth: '.grid-item',
-  stagger: 30,
   percentPosition: true,
 });
 
