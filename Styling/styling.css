@@ -8,7 +8,7 @@
   src: url(../Data/Fonts/abel-regular-webfont.woff);
 }
 
-.grid{
+/* .grid{
   display: grid;
   grid-template-columns: repeat(8,12.5%);
 
@@ -27,7 +27,8 @@
   grid-template-columns: repeat(2,50%);
 
 }
-}
+} */
+
 h1{
   font-size: 2rem;
   background: rgba(255, 255, 255, 0);
@@ -35,32 +36,46 @@ h1{
 
 body{
 
-background-color: rgb(255, 128, 128);
+
 font-family: 'schrift';
 font-size: 20px;
 }
+.grid-item{
+ min-width: 50px;
+ width: 200px;
+ word-wrap: break-word;
+ margin:auto;
 
+}
 
 .content-wrapper{
-word-wrap: break-word;
+
 background-color: rgb(249, 167, 167);
 padding: 20px;
 margin: 5px;
-grid-auto-flow: row;
-cursor: pointer;
-
+height:100px;
+/* grid-auto-flow: row; */
+overflow: hidden;
 
 }
-.text{
-  display: none;
+.hidden{
+  /* display: none; */
+}
+
+.testgrid{
+  margin:auto;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .container :hover{
 background-color: rgb(219, 134, 134);
-transition: 0.5s;
+
 }
 
-.content-wrapper.open{
-height: 500px;
-transition: transform 0.3s ease-in-out;
+.open{
+  height: 500px;
+  z-index: 1;
+  -webkit-transition: height 0.5s ease-in-out;
+
 }

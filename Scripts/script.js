@@ -35,6 +35,32 @@ var content = [
     title: 'Object 7',
     text: 'blabla',
 
+  },
+  {
+    title: 'Object 7',
+    text: 'blabla',
+
+  },
+  {
+    title: 'Object 7',
+    text: 'blabla',
+
+  },
+  {
+    title: 'Object 7',
+    text: 'blabla',
+
+  },
+  {
+    title: 'Object 7',
+    text: 'blabla',
+
+  },
+  {
+    title: 'Object 7',
+    text: 'blabla',
+    img: ''
+
   }
 
 ];
@@ -48,11 +74,13 @@ for (var i = 0; i < content.length; i++){
 }
 
 function populateTemplate(content){
-  var filler = `<div class="content-wrapper" >
-                <h1>${content.title}<h1/>
-                <span class="text">${content.text}<span/>
+  var filler = `<div class="content-wrapper grid-item" >
+                <h1>${content.title}</h1>
+
+                <span class="hidden" id="text">${content.text}<br></span>
+                <button type="button"> Test Button </button>
+
                 <div/>`;
-  console.log("content", $(filler));
   return filler;
 }
 
@@ -69,9 +97,22 @@ $('.content-wrapper').click(function(event){
     var id = event.target.id;
     console.log('id = ' + id);
     $( this ).toggleClass( "open" );
-    $('text').toggleClass("open");
+    $(this).show();
 
-})
+  });
+
+
+    $('.testgrid').masonry({
+  // options
+  itemSelector: '.grid-item',
+  horizontalOrder: true,
+  columnwidth: '.grid-item',
+  stagger: 30,
+  percentPosition: true,
+});
+
+
+
 //
 // input.click(function(index){
 //   console.log("INDEX",input.id);
