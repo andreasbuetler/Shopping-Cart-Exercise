@@ -4,8 +4,12 @@
 }
 
 @font-face {
-  font-family: "schrift";
-  src: url(../Data/Fonts/abel-regular-webfont.woff);
+  font-family: "avenir-next-medium";
+  src: url(../Data/Fonts/AvenirNextLTPro-MediumCn.woff);
+}
+@font-face {
+  font-family: "avenir-next-regular";
+  src: url(../Data/Fonts/AvenirNextLTPro-Regular.woff);
 }
 
 /* .grid{
@@ -30,14 +34,22 @@
 } */
 
 h1{
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-family: 'avenir-next-medium';
+  color: #54514C;
+}
+h2{
+  font-family: 'avenir-next-regular';
+  font-size: 1rem;
+  color: #54514C;
   background: rgba(255, 255, 255, 0);
 }
 
 body{
 
+font-family: 'avenir-next-regular';
+font-size: 1rem;
 
-font-family: 'schrift';
 font-size: 20px;
 }
 .grid-item{
@@ -45,37 +57,59 @@ font-size: 20px;
  width: 200px;
  word-wrap: break-word;
  margin:auto;
+ display: inline-block;
 
 }
 
 .content-wrapper{
-background-color: rgb(91, 106, 240);
+/* background-color: rgb(91, 106, 240); */
 padding: 20px;
-margin: 10px;
+margin: 1px;
 /* grid-auto-flow: row; */
 overflow: hidden;
+border-bottom: solid 1px #54514C;
+background-color: white;
 
 
-}
-.hidden{
-  /* display: none; */
+
 }
 
 .testgrid{
-  margin:auto;
   padding-left: 100px;
   padding-right: 100px;
+
 }
 
 .container :hover{
-background-color: rgb(219, 134, 134);
+background-color: rgb(240, 240, 240);
+transition: 0.5s;
 cursor: pointer;
 
 }
 
-.open{
-  height: 500px;
-  z-index: 1;
-  -webkit-transition: height 0.5s ease-in-out;
+.button-secondary{
+  padding: 3px;
+  border: solid 1px #D6CAB0;
+  border-radius: 2px;
+  margin: 0 auto;
+}
+.button-secondary:hover{
+background-color: #D6CAB0;
+color: white;
+
+}
+
+.hidden{
+display:none;
+margin: 0 20;
+
+
+}
+
+.shopping-cart{
+float: right;
+width: 20%;
+height: 100%;
+
 
 }
