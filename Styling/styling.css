@@ -6,163 +6,137 @@
 @font-face {
   font-family: "avenir-next-medium";
   src: url(../Data/Fonts/AvenirNextLTPro-MediumCn.woff);
-
 }
+
 @font-face {
   font-family: "avenir-next-regular";
   src: url(../Data/Fonts/AvenirNextLTPro-Regular.woff);
 }
 
-/* .grid{
-  display: grid;
-  grid-template-columns: repeat(8,12.5%);
-
-}
-
-@media (max-width: 720px) {
-.grid{
-  display: grid;
-  grid-template-columns: repeat(4,25%);
-
-}
-}
-@media (max-width: 400px) {
-.grid{
-  display: grid;
-  grid-template-columns: repeat(2,50%);
-
-}
-} */
-
-h1{
+h1 {
   font-size: 1.5rem;
   font-family: 'avenir-next-medium';
   color: #54514C;
 }
-h2{
+
+h2 {
   font-family: 'avenir-next-regular';
   font-size: 1rem;
   color: #54514C;
   background: rgba(255, 255, 255, 0);
 }
 
-body{
-
-font-family: 'avenir-next-regular';
-font-size: 0.25rem;
-color: #54514C;
+body {
+  font-family: 'avenir-next-regular';
+  font-size: 0.25rem;
+  color: #54514C;
 }
-.grid-item{
- min-width: 50px;
- width: 200px;
- word-wrap: break-word;
- margin:auto;
- display: inline-block;
 
+.grid-item {
+  min-width: 50px;
+  width: 200px;
+  word-wrap: break-word;
+  margin: auto;
+  display: inline-block;
 }
-.description-styling{
+
+.description-styling {
   width: inherit;
   border-bottom: solid 1px #54514C;
   font-family: 'avenir-next-regular';
   font-size: 0.75rem;
 }
 
-.content-wrapper{
-/* background-color: rgb(91, 106, 240); */
-padding: 20px;
-margin: 1px;
-/* grid-auto-flow: row; */
-overflow: hidden;
-border-bottom: solid 1px #54514C;
-background-color: white;
-
-
-
+.content-wrapper {
+  /* background-color: rgb(91, 106, 240); */
+  padding: 20px;
+  margin: 1px;
+  /* grid-auto-flow: row; */
+  overflow: hidden;
+  border-bottom: solid 1px #54514C;
+  background-color: white;
 }
 
-.testgrid{
+.testgrid {
   padding-left: 100px;
   padding-right: 100px;
-
 }
 
-.container :hover{
-background-color: rgb(240, 240, 240);
-transition: 0.5s;
-cursor: pointer;
-transition: background 1s ease-in-out;
-
-
+.container :hover {
+  background-color: rgb(240, 240, 240);
+  transition: 0.5s;
+  cursor: pointer;
+  transition: background 1s ease-in-out;
 }
 
-.button-secondary{
+.button-secondary {
   font-family: 'avenir-next-regular';
   padding: 5px;
   border: solid 0.5px #54514C;
   color: #54514C;
   border-radius: 2px;
-  margin:10px auto 5px  auto;
-
+  margin: 10px auto 5px auto;
 }
 
-
-.button-secondary:hover{
-background-color: #D6CAB0;
-border: solid 0.5px #D6CAB0;
-color: white;
-
-
+.button-secondary:hover {
+  background-color: #D6CAB0;
+  border: solid 0.5px #D6CAB0;
+  color: white;
 }
 
-.hidden{
-display:none;
+.hidden {
+  display: none;
 }
 
-
-.remove-button{
+.remove-button {
   float: right;
   cursor: pointer;
 }
 
-.text{
+.text {
   font-family: 'avenir-next-regular';
   font-size: 1rem;
   color: #54514C;
 }
 
-
-
-.shopping-cart{
+.shopping-cart {
   font-size: 1.5rem;
   font-family: 'avenir-next-medium';
   color: #54514C;
-background-color: #F0F1F3;
-padding: 10px;
-width: 20%;
-height: 100vw;
-float: right;
-/* position: fixed;
+  background-color: #F0F1F3;
+  padding: 10px;
+  width: 20%;
+  height: 100vw;
+  float: right;
+  /* position: fixed;
 right: 0;
    top: 0; */
-
-
 }
 
-.chosen-ingredient{
+.js-remove{
+  
+}
+
+
+.chosen-ingredient {
   font-family: 'avenir-next-regular';
   font-size: 1rem;
-padding: 10px;
-border-bottom: solid 1px #54514C;
+  padding: 10px;
+  border-bottom: solid 1px #54514C;
+  cursor: default;
+
 }
 
-.chosen-ingredient:hover{
- background-color: #ebebeb;
+.chosen-ingredient:hover {
+  background-color: #ebebeb;
 }
-.listTitle{
-    font-family: 'avenir-next-medium';
-    font-size: 1rem;
+
+.listTitle {
+  font-family: 'avenir-next-medium';
+  font-size: 1rem;
 }
-.listManufacturer{
-    font-family: 'avenir-next-regular';
-    font-size: 0.75rem;
+
+.listManufacturer {
+  font-family: 'avenir-next-regular';
+  font-size: 0.75rem;
 }
