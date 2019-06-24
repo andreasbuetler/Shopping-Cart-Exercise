@@ -84,7 +84,7 @@ $(document).ready(function() {
   ];
 
   function fillContent(something) {
-    for (var i = 0; i < content.length; i++) {
+    for (var i=0;i<content.length;i++) {
       var $populatedTemplate = $(populateTemplate(something[i]));
       $('#rect').append($populatedTemplate);
     }
@@ -100,8 +100,8 @@ $(document).ready(function() {
                 <br>
                 <span  class="text">${content.description}<br></span>
                 <button class="js-button button-secondary" type="button">Add to Cart</button>
-                <div/>
-                <div/>`;
+                </div>
+                </div>`;
     return filler;
   }
 
@@ -126,12 +126,11 @@ $(document).ready(function() {
     var titleName = parent_box2.find('.js-title').html();
     var manufacturerName = parent_box2.find('.js-manufacturer').html();
     console.log('titleName: ', titleName);
-    console.log('manbufacturerName: ', manufacturerName);
-    console.log('removed', titleName);
+    console.log('mannufacturerName: ', manufacturerName);
     // create list item HTML
-    var listHTML = `<div class="chosen-ingredient">
+    var listHTML = `<div class="chosen-item">
                   <span class="listTitle">${titleName}</span>
-                  <button class="js-remove remove-button button-secondary" "type:"button"> Remove </button>
+                  <button class="js-remove remove-button button-secondary" type="button"> Remove </button>
                   <br>
                   <span class="listManufacturer">${manufacturerName}</span>
                   <br>
@@ -142,9 +141,10 @@ $(document).ready(function() {
   $('.js-remove').click(function(event) {
     // .js-remove doesn't react on click, but that's how I would do the remove function:
     var toRemove;
-    toRemove = $(this).closest('.chosen-ingredient');
+    toRemove = $(this).closest('.chosen-item');
     toRemove.removeClass();
-    var removedObject = parent_box2.find('.listTitle').html();
+
+    var removedObject = toRemove.find('.listTitle').html();
     console.log("removed", removedObject);
   });
 
